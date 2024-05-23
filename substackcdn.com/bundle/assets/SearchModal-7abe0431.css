@@ -1,0 +1,43 @@
+._image_1x08e_1,
+._icon_1x08e_2 {
+    height: var(--size-40);
+    width: var(--size-40)
+}
+
+._image_1x08e_1 {
+    object-fit: cover
+}
+
+._searchOptions_1x08e_10 a {
+    text-decoration: none
+}
+
+@media (hover: hover) {
+    ._row_1x08e_14._active_1x08e_16 ._icon_1x08e_2 {
+        background-color: var(--color-bg-tertiary)
+    }
+}
+
+@media (hover: hover) {
+    ._remove_1x08e_25:hover {
+        background-color: var(--color-bg-tertiary)
+    }
+}
+
+._highlight_1x08e_32 {
+    font-weight: var(--font-weight-semibold);
+    background-color: var(--color-bg-accent-orange);
+    padding: 0 var(--size-2);
+    border-radius: var(--size-2)
+}
+
+._spinner_1x08e_40 {
+    position: absolute;
+    right: var(--size-32);
+    top: 0;
+    bottom: 0
+}
+
+._inputStyle_1x08e_47 {
+    position: relative
+}
