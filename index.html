@@ -49,35 +49,53 @@
 <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container">
-            <a class="js-scroll-trigger" href="#page-top">
-                HOME
-            </a>
-            
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#description">Intro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        
-                        <a class="nav-link" href="https://github.com/ImranHasmey/ImranHasmey.github.io/blob/5d8084f8b80a019d16e3f3ac7c7a584667024ea4/Mohammad%20Imran%20Hasmey.pdf" target="_blank">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                    </li>
-                </ul>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Embed PDF in Navbar</title>
+        <!-- Add necessary Bootstrap CSS and JS files -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Section -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+            <div class="container">
+                <a class="js-scroll-trigger" href="#page-top">HOME</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#description">Intro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link to PDF -->
+                            <a class="nav-link" href="https://raw.githubusercontent.com/ImranHasmey/ImranHasmey.github.io/5d8084f8b80a019d16e3f3ac7c7a584667024ea4/Mohammad%20Imran%20Hasmey.pdf" target="_blank">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    
+        <!-- Embed PDF Section -->
+        <div style="margin-top: 80px; text-align: center;">
+            <h2>Resume</h2>
+            <embed src="https://raw.githubusercontent.com/ImranHasmey/ImranHasmey.github.io/5d8084f8b80a019d16e3f3ac7c7a584667024ea4/Mohammad%20Imran%20Hasmey.pdf" width="600" height="500" type="application/pdf">
         </div>
-    </nav>
+    </body>
+    </html>
+    
 
     <!-- =======================  LANDING SECTION ======================= -->
 
