@@ -1,0 +1,16 @@
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #222; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+/* Additional styles for dark mode */
+.dark-mode .navbar-nav .nav-link {
+    color: #fff; /* Light text color for navbar links */
+}
+
+.dark-mode .navbar-toggler-icon {
+    background-color: #fff; /* Light color for navbar toggler icon */
+}
+
+/* Add more styles as needed for other elements */
