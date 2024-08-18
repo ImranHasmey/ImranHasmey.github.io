@@ -150,7 +150,7 @@
                 <div class="col-lg-8 text-center text-md-left">
                     <p>Hi, I'm Imran.</p>
                     <p>A little bit about me.
-                        I am a dedicated and motivated individual with a passion for data analytics and software development. Currently Pursuing Post Graduation Diploma in Advanced Computing in Big Data, Mar-2024- Aug 2024 from Center for Development of Advanced Computing. Prior to that, I earned a Post Graduation Degree Masters in Computer Applications (MCA) in 2023 from GVPCE. My academic journey has equipped me with a strong foundation in programming languages such as <b>C</b>, <b>Python</b>, <b>SQL</b> and <b>Linux</b>.I am skilled for most <b>Data-Science</b> <b>Data Analysis</b>, application of <b>Statistical and Mathematical methods</b>,  <b>Data Visualization</b> and results <b>Communication</b>.
+                        I am a dedicated and motivated individual with a passion for data analytics and software development. Recent Post Graduation Diploma in Advanced Computing in Big Data, Mar-2024- Aug 2024 from Center for Development of Advanced Computing. Prior to that, I earned a Post Graduation Degree Masters in Computer Applications (MCA) in 2023 from GVPCE. My academic journey has equipped me with a strong foundation in programming languages such as <b>Python</b>, <b>SQL</b>, <b>Excel</b>, <b>PowerBI</b> and <b>Tableau</b>.I am skilled for most <b>Data-Science</b> <b>Data Analysis</b>, application of <b>Statistical and Mathematical methods</b>,  <b>Data Visualization</b> and results <b>Communication</b>.
                     </p>
                                       <!--  <p>I worked in the field of data science for renowned research institutes like the <a href="http://qbi.uq.edu.au">University of
               Queensland</a> and private companies like <a href="">Terres Inovia</a>. I also worked as a <b>senior software engineer</b> for the dataviz team at <a href="https://www.datadoghq.com/">Datadog</a>.</p>-->
@@ -475,8 +475,19 @@
             </div>
             <br><br>
             <div id="portfolio-items" class="row">
-              
-
+                <div class="col-md-3 col-sm-6 portfolio-item">
+                    <a class="portfolio-link" data-toggle="modal" href="#all">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <p>Open Ai Based Chatbot</p>
+                                <hr>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="https://github.com/ImranHasmey/ImranHasmey.github.io/blob/main/img/portfolio/Air%20BNB.png?raw=true" alt="">
+                    </a>
+                </div>
+            </div>
+            
                 <div class="col-md-3 col-sm-6 portfolio-item show column  Dashboard ">
                     <a class="portfolio-link" data-toggle="modal" href="#Tableau">
                         <div class="portfolio-hover">
@@ -1009,6 +1020,125 @@
 
 
    <!-- Dashboard -->
+   <center>
+    <div class="portfolio-modal modal fade" id="Chatbot" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog h-100">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto">
+                            <div class="modal-body">
+                                <img src="" width="180px"></img>
+                                <h4>Chatbot Application</h4>
+                                <br><br>
+                                <div style="text-align: left">
+                                    <h6>Description</h6>
+                                    <hr>
+                                    <p>This project is a web-based chatbot application designed to handle user queries by leveraging a question-answering (QA) system. The application is implemented using Flask for the web interface and Streamlit for an alternative user interface. It incorporates a spelling correction feature and utilizes a machine learning-based QA system for generating responses.</p>
+
+                                    <h6>Features</h6>
+                                    <ul>
+                                        <li><strong>Web Interface (Flask):</strong>
+                                            <ul>
+                                                <li><strong>Home Page:</strong> Provides a simple chat interface where users can type their queries.</li>
+                                                <li><strong>Ask Endpoint:</strong> Processes user messages with spelling correction and retrieves appropriate responses from the QA system. Responses are returned in JSON format, ensuring seamless interaction with the front end.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Alternative Interface (Streamlit):</strong>
+                                            <ul>
+                                                <li><strong>Chat Interface:</strong> Offers a straightforward UI to enter and submit queries, displaying responses from the chatbot directly on the page.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Spelling Correction:</strong> Utilizes the <code>SpellChecker</code> library to correct spelling mistakes in user input before processing it.</li>
+                                        <li><strong>Question-Answering System:</strong>
+                                            <ul>
+                                                <li><strong>Text Preprocessing:</strong> Handles tokenization, lemmatization, stemming, and stopword removal to prepare text for analysis.</li>
+                                                <li><strong>Vectorization and Similarity Matching:</strong> Uses TF-IDF Vectorization and cosine similarity to match user queries with a predefined set of questions and provide relevant answers.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <h6>Components</h6>
+                                    <ul>
+                                        <li><strong>Flask Application:</strong>
+                                            <ul>
+                                                <li><code>app.py</code>: Handles routing and rendering of the web interface (<code>chat.html</code>). Processes POST requests to the <code>/ask</code> endpoint, corrects spelling, retrieves answers from the QA system, and returns them in JSON format.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Question-Answering System:</strong>
+                                            <ul>
+                                                <li><code>chat.py</code>:
+                                                    <ul>
+                                                        <li><strong>Preprocessing Functions:</strong> Cleans and preprocesses text data.</li>
+                                                        <li><strong>QASystem Class:</strong> Manages the QA system by loading questions and answers from a CSV file, preprocessing them, and computing similarities to find the best response.</li>
+                                                        <li><strong><code>get_chatbot_response</code> Function:</strong> Interfaces with the QA system to generate responses based on user input.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Streamlit Application:</strong>
+                                            <ul>
+                                                <li><code>streamlit_app.py</code>: Provides a separate UI for users to interact with the chatbot. Handles user input, corrects spelling, retrieves responses from the QA system, and displays them.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <h6>Setup and Dependencies</h6>
+                                    <ul>
+                                        <li><strong>Flask:</strong> For creating the web application.</li>
+                                        <li><strong>Streamlit:</strong> For the alternative chatbot UI.</li>
+                                        <li><strong>SpellChecker:</strong> For spelling correction.</li>
+                                        <li><strong>Pandas:</strong> For handling CSV files.</li>
+                                        <li><strong>Scikit-learn:</strong> For TF-IDF vectorization and cosine similarity computation.</li>
+                                        <li><strong>NLTK:</strong> For text preprocessing tasks such as tokenization, lemmatization, and stemming.</li>
+                                        <li><strong>CSV File (<code>test.csv</code>):</strong> Contains questions and answers for the QA system.</li>
+                                    </ul>
+
+                                    <h6>How to Run</h6>
+                                    <ol>
+                                        <li><strong>Flask Application:</strong>
+                                            <ul>
+                                                <li>Install dependencies: <code>pip install flask spellchecker pandas scikit-learn nltk</code></li>
+                                                <li>Run the Flask application: <code>python app.py</code></li>
+                                                <li>Access the web interface at <code>http://127.0.0.1:5000</code></li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Streamlit Application:</strong>
+                                            <ul>
+                                                <li>Install dependencies: <code>pip install streamlit spellchecker pandas scikit-learn nltk</code></li>
+                                                <li>Run the Streamlit application: <code>streamlit run streamlit_app.py</code></li>
+                                                <li>Access the Streamlit interface at <code>http://localhost:8501</code></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+
+                                    <h6>Usage</h6>
+                                    <ul>
+                                        <li><strong>Flask Interface:</strong> Enter your message into the text input field and click "Send" to interact with the chatbot. The system will handle spelling corrections and provide a response based on the pre-defined question-answer pairs.</li>
+                                        <li><strong>Streamlit Interface:</strong> Enter your message into the input field and click "Ask" to receive a response from the chatbot.</li>
+                                    </ul>
+
+                                    <h6>Skills</h6>   
+                                    <span><a><b>Flask</b>, <b>Streamlit</b>, <b>SpellChecker</b>, <b>Pandas</b>, <b>Scikit-learn</b>, <b>NLTK</b></a></span>
+                                    <div style="margin-top: 5px;">
+                                       <a class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://github.com/ImranHasmey/">Github</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+
+
 
    <center>
     <div class="portfolio-modal modal fade" id="Tableau" tabindex="-1" role="dialog" aria-hidden="true">
